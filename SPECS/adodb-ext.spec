@@ -12,9 +12,9 @@
 %define soname		%{modname}.so
 %define inifile		%{modname}.ini
 %if %build_php4
-%define php_version	%(php4 -r 'echo PHP_VERSION;')
+%define php_version	%(php4 -r 'echo substr(PHP_VERSION,0,3);')
 %else
-%define php_version	%(php -r 'echo PHP_VERSION;')
+%define php_version	%(php -r 'echo substr(PHP_VERSION,0,3);')
 %endif
 
 Name:		%{name}
@@ -24,8 +24,13 @@ Epoch:		1
 Summary:	ADOdb extension for PHP
 Group:		Development/Libraries
 License:	BSD
+%if "%{php_version}" == "5.3"
+URL:		http://dev.undermedia.com.ec
+Source0:	http://dev.undermedia.com.ec/repo/adodb-ext/SOURCE/%{modname}-php5.3-%{src_version}.zip
+%else
 URL:		http://phplens.com/
-Source0:	http://dev.undermedia.com.ec/repo/SOURCE/adodb-ext/%{modname}-%{src_version}.zip
+Source0:	http://phplens.com/lens/dl/%{modname}-%{src_version}.zip
+%endif
 Source1:	%{name}.ini.bz2
 Requires:	php
 %if %build_php4
@@ -56,9 +61,12 @@ phpize
 %endif
 %configure 
 make
-mv modules/*.so %{modname}.so
+
+%check
+make test
 
 %install
+mv modules/*.so %{modname}.so
 rm -rf %{buildroot}
 
 %if %build_php4
