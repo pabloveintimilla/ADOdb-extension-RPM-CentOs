@@ -10,6 +10,6 @@ To generate RPM use:
 
  # [makerpm@local ~]$ rpmdev-setuptree
 
- # [makerpm@local ~]$ rpmbuild -ba NOMBRE.spec
+ # [makerpm@local ~]$ rpmbuild -ba adodb-ext.spec
 
 More detail in http://fedoraproject.org/wiki/How_to_create_an_RPM_package
