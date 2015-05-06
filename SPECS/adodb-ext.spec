@@ -101,7 +101,7 @@ rm -rf %{buildroot}
 %endif
 
 %changelog
-* Sat Nov 19 2011 Pablo Veintimilla <pveintimilla@undermedia.com.ec> 1:5.0.4-1.el6 
+* Sat Nov 19 2011 Pablo Veintimilla <pabloveintimilla@gmail.com> 1:5.0.4-1.el6 
 - Upgrade adodb library, and port to centOS 6. This use a especial source of adodb to suport php 5.3
 
 * Fri Jul 08 2005 Guillaume Rousse <guillomovitch@mandriva.org> 1:5.0.2-4mdk 
