@@ -20,7 +20,7 @@ Develop
 ------------
 
 To generate RPM use:
-
+`
  # yum groupinstall "Development Tools" 
  # yum install rpmdevtools
  # yum install rpmlint
@@ -30,5 +30,5 @@ To generate RPM use:
  # [makerpm@local ~]$ rpmdev-setuptree
 
  # [makerpm@local ~]$ rpmbuild -ba adodb-ext.spec
-
+`
 More detail in http://fedoraproject.org/wiki/How_to_create_an_RPM_package
