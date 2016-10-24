@@ -1,4 +1,11 @@
-Repository of RPM PHP-ADOdb extension for CentOS
+= Repository of RPM PHP-ADOdb extension for CentOS =
+
+== Instalation ==
+
+1. Dowload wget https://github.com/pabloveintimilla/ADOdb-extension-RPM-CentOs/releases/download/v1.0/php-adodb-ext-5.0.4-1.el6.x86_64.rpm
+2. Install: rpm -Ivh php-adodb-ext-5.0.4-1.el6.x86_64.rpm
+
+== Develop ==
 
 To generate RPM use:
 
