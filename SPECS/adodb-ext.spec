@@ -27,7 +27,6 @@ License:	BSD
 %if "%{php_version}" == "5.3"
 URL:		https://github.com/pabloveintimilla/ADOdb-extension-RPM-CentOs/
 Source0: https://github.com/pabloveintimilla/ADOdb-extension-RPM-CentOs/blob/master/SOURCES/%{modname}-php5.3-%{src_version}.zip?raw=true
-Source1: http://dev.undermedia.com.ec/repo/adodb-ext/SOURCE/%{modname}-php5.3-%{src_version}.zip
 %else
 URL:		http://phplens.com/
 Source0:	http://phplens.com/lens/dl/%{modname}-%{src_version}.zip
